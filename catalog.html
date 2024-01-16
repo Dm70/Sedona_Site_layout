@@ -36,11 +36,13 @@
   </header>
   <!-- Раздел main-catalog сайта -->
   <main class="main-catalog">
-    <section class="filter">
-      <form action="https://echo.htmlacademy.ru/" method="post" name="form-home-select">
-        <fieldset>
-          <legend>Инфраструктура:</legend>
-            <p class="form-structure-text">
+    <h1 class="visually-hidden main-catalog-title">Каталог для поиска жилья в городе Седона</h1>
+    <section class="catalog-product">
+      <h2 class="visually-hidden">Форма ввода фильтров для поиска жилья</h2>
+      <form action="https://echo.htmlacademy.ru/" method="post" name="form-filter" class="catalog-filter" oninput="`result.value`=parseInt(`form-filter-range.value`)">
+        <fieldset class="catalog-filter-group">
+          <legend class="catalog-filter-title">Инфраструктура:</legend>
+            <p class="catalog-filter-text">
               <input type="checkbox" name="pool" id="pool" checked>
               <label for="pool">Бассейн</label><br>
               <input type="checkbox" name="parking" id="parking">
@@ -49,15 +51,26 @@
               <label for="wifi">Wi-Fi</label>
             </p>
         </fieldset>
-        <fieldset>
-          <legend>Тип жилья:</legend>
-            <p class="form-home-text">
+        <fieldset class="catalog-filter-group">
+          <legend class="catalog-filter-title">Тип жилья:</legend>
+            <p class="catalog-filter-text">
               <input type="checkbox" name="hotel" id="hotel" checked>
               <label for="hotel">Гостиница</label><br>
               <input type="checkbox" name="motel" id="motel" checked>
               <label for="motel">Мотель</label><br>
               <input type="checkbox" name="apartments" id="apartments" checked>
               <label for="apartments">Апартаменты</label>
+            </p>
+        </fieldset>
+        <fieldset class="catalog-filter-group">
+          <legend class="catalog-filter-title">Стоимость в сутки, ₽:</legend>
+            <p class="catalog-filter-label">
+              <label for="form-filter-min-price">ОТ<input type="text" name="form-filter-min-price" id="form-filter-min-price" value="0"></label>
+              <label for="form-filter-max-price">ДО<input type="text" name="form-filter-max-price" id="form-filter-max-price" value="3000"></label>
+            </p>
+            <p class="catalog-filter-range">
+              <input type="range" name="form-filter-range" id="form-filter-range" min="0" max="25000" step="100" value="3000">
+              <output name="result" for="form-filter-max-price"></output>
             </p>
         </fieldset>
       </form>
