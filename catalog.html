@@ -29,7 +29,7 @@
           <a href="#" class="navigation-item-link">Карта штата</a>
         </li>
         <li class="navigation-item">
-          <a href="#" class="navigation-item-link">Гостиницы</a>
+          <a href="#" class="navigation-item-link navigation-item-link-active">Гостиницы</a>
         </li>
       </ul>
     </nav>
@@ -37,9 +37,10 @@
   <!-- Раздел main-catalog сайта -->
   <main class="main-catalog">
     <h1 class="visually-hidden main-catalog-title">Каталог для поиска жилья в городе Седона</h1>
+    <!-- Раздел с формой ввода фильтров для поиска жилья -->
     <section class="catalog-product">
       <h2 class="visually-hidden">Форма ввода фильтров для поиска жилья</h2>
-      <form action="https://echo.htmlacademy.ru/" method="post" name="form-filter" class="catalog-filter" oninput="`result.value`=parseInt(`form-filter-range.value`)">
+      <form action="https://echo.htmlacademy.ru/" method="post" name="form-filter" class="form-catalog">
         <fieldset class="catalog-filter-group">
           <legend class="catalog-filter-title">Инфраструктура:</legend>
             <p class="catalog-filter-text">
@@ -64,16 +65,48 @@
         </fieldset>
         <fieldset class="catalog-filter-group">
           <legend class="catalog-filter-title">Стоимость в сутки, ₽:</legend>
-            <p class="catalog-filter-label">
-              <label for="form-filter-min-price">ОТ<input type="text" name="form-filter-min-price" id="form-filter-min-price" value="0"></label>
-              <label for="form-filter-max-price">ДО<input type="text" name="form-filter-max-price" id="form-filter-max-price" value="3000"></label>
+            <p class="catalog-filter-text catalog-filter-price">
+              <label for="form-filter-min-price">ОТ<input type="number" name="form-filter-min-price" id="form-filter-min-price" value="0" min="0" max="5000" step="100"></label>
+              <label for="form-filter-max-price">ДО<input type="number" name="form-filter-max-price" id="form-filter-max-price" value="3000" min="0" max="10000" step="100"></label>
             </p>
-            <p class="catalog-filter-range">
-              <input type="range" name="form-filter-range" id="form-filter-range" min="0" max="25000" step="100" value="3000">
-              <output name="result" for="form-filter-max-price"></output>
+            <p class="catalog-filter-text catalog-filter-button">
+              <input type="button" value="Минимальная цена" name="min-pric-btn" class="btn min-btn">
+              <input type="button" value="Максимальная цена" name="max-pric-btn" class="btn max-btn">
+            </p>
+            <p class="result-view">
+              <button type="submit" class="btn result-btn">Показать</button>
             </p>
         </fieldset>
       </form>
+    </section>
+    <!-- Раздел с результатами поиска -->
+    <section class="result">
+      <h3 class="visually-hidden">Результат поиска и сортировки</h3>
+      <!-- Блок с сортировкой -->
+        <div class="result-sorting-install">
+          <p class="result-sorting-text">Найдено: 3</p>
+            <ul class="result-sorting-list">
+              <p class="sorting-list-text">Сортировка:</p>
+              <li class="sorting-item sorting-item-active">По цене</li>
+              <li class="sorting-item">По типу</li>
+              <li class="sorting-item">По рейтингу</li>
+            </ul>
+        </div>
+        <div class="sorting-btn">
+          <input type="button" value="По возрастанию" name="upper" class="btn upper-btn">
+          <input type="button" value="По убыванию" name="lower" class="btn lower-btn">
+        </div>
+      <!-- Блок с контентом результата поиска -->
+        <div class="result-content">
+          <article class="content-card">
+            <p class="img-text">
+              <img src="" alt="Гостиница Amara Resort & Spa" class="content-img">
+            </p>
+            <h4 class="content-card-title">Amara Resort & Spa</h4>
+            <span class="content-type">Гостиница</span>
+            <span class="content-from">От 4000 Р.</span>
+          </article>
+        </div>
     </section>
   </main>
     <!-- Раздел подвала сайта -->
