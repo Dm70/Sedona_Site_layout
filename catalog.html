@@ -40,7 +40,7 @@
     <!-- Раздел с формой ввода фильтров для поиска жилья -->
     <section class="catalog-product">
       <h2 class="visually-hidden">Форма ввода фильтров для поиска жилья</h2>
-      <form action="https://echo.htmlacademy.ru/" method="post" name="form-filter" class="form-catalog">
+      <form action="https://echo.htmlacademy.ru/" method="post" name="form-filter" class="catalog-filter">
         <fieldset class="catalog-filter-group">
           <legend class="catalog-filter-title">Инфраструктура:</legend>
             <p class="catalog-filter-text">
@@ -66,8 +66,8 @@
         <fieldset class="catalog-filter-group">
           <legend class="catalog-filter-title">Стоимость в сутки, ₽:</legend>
             <p class="catalog-filter-text catalog-filter-price">
-              <label for="form-filter-min-price">ОТ<input type="number" name="form-filter-min-price" id="form-filter-min-price" value="0" min="0" max="5000" step="100"></label>
-              <label for="form-filter-max-price">ДО<input type="number" name="form-filter-max-price" id="form-filter-max-price" value="3000" min="0" max="10000" step="100"></label>
+              <label class="catalog-filter-label">От <input type="number" class="catalog-filter-input" name="form-filter-min-price" id="form-filter-min-price" value="0" min="0" max="5000" step="100"></label>
+              <label class="catalog-filter-label">До <input type="number" class="catalog-filter-input" name="form-filter-max-price" id="form-filter-max-price" value="3000" min="0" max="10000" step="100"></label>
             </p>
             <p class="catalog-filter-text catalog-filter-button">
               <input type="button" value="Минимальная цена" name="min-pric-btn" class="btn min-btn">
@@ -81,7 +81,7 @@
     </section>
     <!-- Раздел с результатами поиска -->
     <section class="result">
-      <h3 class="visually-hidden">Результат поиска и сортировки</h3>
+      <h3 class="visually-hidden">Результат сортировки</h3>
       <!-- Блок с сортировкой -->
         <div class="result-sorting-install">
           <p class="result-sorting-text">Найдено: 3</p>
@@ -93,18 +93,80 @@
             </ul>
         </div>
         <div class="sorting-btn">
-          <input type="button" value="По возрастанию" name="upper" class="btn upper-btn">
-          <input type="button" value="По убыванию" name="lower" class="btn lower-btn">
+          <input type="button" value="Сортировать по возрастанию" name="upper" class="btn upper-btn">
+          <input type="button" value="Сортировать по убыванию" name="lower" class="btn lower-btn">
         </div>
       <!-- Блок с контентом результата поиска -->
         <div class="result-content">
+          <h3 class="visually-hidden">Результат поиска</h3>
           <article class="content-card">
-            <p class="img-text">
+            <p class="content-img-text">
               <img src="" alt="Гостиница Amara Resort & Spa" class="content-img">
             </p>
             <h4 class="content-card-title">Amara Resort & Spa</h4>
-            <span class="content-type">Гостиница</span>
-            <span class="content-from">От 4000 Р.</span>
+              <span class="content-type">Гостиница</span>
+              <span class="content-from">От 4000 Р</span>
+            <p>
+              <a href="#" class="content-btn content-btn-info"><span class="content-btn-text content-btn-text-info">Подробнее</span></a>
+              <a href="#" class="content-btn content-btn-reserved"><span class="content-btn-text content-btn-text-reserved">Забронировать</span></a>
+            </p>
+          <div class="rating">
+            <ul class="rating-list">
+              <li class="rating-item"><span class="rating-item-star">1 звезда</span></li>
+              <li class="rating-item"><span class="rating-item-star">2 звезды</span></li>
+              <li class="rating-item"><span class="rating-item-star">3 звезды</span></li>
+              <li class="rating-item"><span class="rating-item-star">4 звезды</span></li>
+            </ul>
+            <p class="rating-text">Рейтинг: 8,5</p>
+          </div>
+          </article>
+
+          <article class="content-card">
+            <p class="content-img-text">
+              <img src="" alt="Мотель Desert Quail Inn" class="content-img">
+            </p>
+            <h4 class="content-card-title">Desert Quail Inn</h4>
+            <span class="content-type">Мотель</span>
+            <span class="content-from">От 3000 Р</span>
+            <p>
+              <a href="#" class="content-btn content-btn-info"><span
+                  class="content-btn-text content-btn-text-info">Подробнее</span></a>
+              <a href="#" class="content-btn content-btn-reserved"><span
+                  class="content-btn-text content-btn-text-reserved">Забронировать</span></a>
+            </p>
+            <div class="rating">
+              <ul class="rating-list">
+                <li class="rating-item"><span class="rating-item-star">1 звезда</span></li>
+                <li class="rating-item"><span class="rating-item-star">2 звезды</span></li>
+                <li class="rating-item"><span class="rating-item-star">3 звезды</span></li>
+                <!-- <li class="rating-item"><span class="rating-item-star">4 звезды</span></li> -->
+              </ul>
+              <p class="rating-text">Рейтинг: 8,9</p>
+            </div>
+          </article>
+
+          <article class="content-card">
+            <p class="content-img-text">
+              <img src="" alt="Апартаменты Villas at Poco Diablo" class="content-img">
+            </p>
+            <h4 class="content-card-title">Villas at Poco Diablo</h4>
+            <span class="content-type">Апартаменты</span>
+            <span class="content-from">От 2000 Р</span>
+            <p>
+              <a href="#" class="content-btn content-btn-info"><span
+                  class="content-btn-text content-btn-text-info">Подробнее</span></a>
+              <a href="#" class="content-btn content-btn-reserved"><span
+                  class="content-btn-text content-btn-text-reserved">Забронировать</span></a>
+            </p>
+            <div class="rating">
+              <ul class="rating-list">
+                <li class="rating-item"><span class="rating-item-star">1 звезда</span></li>
+                <li class="rating-item"><span class="rating-item-star">2 звезды</span></li>
+                <!-- <li class="rating-item"><span class="rating-item-star">3 звезды</span></li> -->
+                <!-- <li class="rating-item"><span class="rating-item-star">4 звезды</span></li> -->
+              </ul>
+              <p class="rating-text">Рейтинг: 9,2</p>
+            </div>
           </article>
         </div>
     </section>
