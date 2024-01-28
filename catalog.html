@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML Academy: Project Sedona</title>
+  <title>Гостиницы города Sedona</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/catalog.css">
 </head>
@@ -29,7 +29,7 @@
           <a href="#" class="navigation-item-link">Карта штата</a>
         </li>
         <li class="navigation-item">
-          <a href="#" class="navigation-item-link navigation-item-link-active">Гостиницы</a>
+          <a class="navigation-item-link navigation-item-link-active">Гостиницы</a>
         </li>
       </ul>
     </nav>
@@ -40,36 +40,55 @@
     <!-- Раздел с формой ввода фильтров для поиска жилья -->
     <section class="catalog-product">
       <h2 class="visually-hidden">Форма ввода фильтров для поиска жилья</h2>
-      <form action="https://echo.htmlacademy.ru/" method="post" name="form-filter" class="catalog-filter">
+      <form action="https://echo.htmlacademy.ru/" method="post" name="form-filter" class="catalog-filter-form">
         <fieldset class="catalog-filter-group">
           <legend class="catalog-filter-title">Инфраструктура:</legend>
-            <p class="catalog-filter-text">
-              <input type="checkbox" name="pool" id="pool" checked>
-              <label for="pool">Бассейн</label><br>
-              <input type="checkbox" name="parking" id="parking">
-              <label for="parking">Парковка</label><br>
-              <input type="checkbox" name="wifi" id="wifi">
-              <label for="wifi">Wi-Fi</label>
-            </p>
+            <ul class="catalog-filter-list">
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input type="checkbox" name="pool" id="pool" class="control-input" checked>
+                  <span class="control-lead">Бассейн</span></label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input type="checkbox" name="parking" id="parking" class="control-input">
+                  <span class="control-lead">Парковка</span></label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input type="checkbox" name="wifi" id="wifi" class="control-input">
+                  <span class="control-lead">Wi-Fi</span></label>
+              </li>
+            </ul>
         </fieldset>
         <fieldset class="catalog-filter-group">
           <legend class="catalog-filter-title">Тип жилья:</legend>
-            <p class="catalog-filter-text">
-              <input type="checkbox" name="hotel" id="hotel" checked>
-              <label for="hotel">Гостиница</label><br>
-              <input type="checkbox" name="motel" id="motel" checked>
-              <label for="motel">Мотель</label><br>
-              <input type="checkbox" name="apartments" id="apartments" checked>
-              <label for="apartments">Апартаменты</label>
-            </p>
+            <ul class="catalog-filter-list">
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input type="checkbox" name="hotel" id="hotel" class="control-input" checked>
+                  <span class="control-lead">Гостиница</span></label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input type="checkbox" name="motel" id="motel" class="control-input" checked>
+                  <span class="control-lead">Мотель</span></label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input type="checkbox" name="apartments" id="apartments" class="control-input" checked>
+                  <span class="control-lead">Апартаменты</span></label>
+              </li>
+            </ul>
         </fieldset>
         <fieldset class="catalog-filter-group">
           <legend class="catalog-filter-title">Стоимость в сутки, ₽:</legend>
-            <p class="catalog-filter-text catalog-filter-price">
+            <p class="catalog-filter-price">
               <label class="catalog-filter-label">От <input type="number" class="catalog-filter-input" name="form-filter-min-price" id="form-filter-min-price" value="0" min="0" max="5000" step="100"></label>
               <label class="catalog-filter-label">До <input type="number" class="catalog-filter-input" name="form-filter-max-price" id="form-filter-max-price" value="3000" min="0" max="10000" step="100"></label>
             </p>
-            <p class="catalog-filter-text catalog-filter-button">
+<!-- Разобраться с классом тега <p> ниже -->
+            <p class="catalog-filter-button">
               <input type="button" value="Минимальная цена" name="min-pric-btn" class="btn min-btn">
               <input type="button" value="Максимальная цена" name="max-pric-btn" class="btn max-btn">
             </p>
@@ -87,9 +106,9 @@
           <p class="result-sorting-text">Найдено: 3</p>
             <ul class="result-sorting-list">
               <p class="sorting-list-text">Сортировка:</p>
-              <li class="sorting-item sorting-item-active">По цене</li>
-              <li class="sorting-item">По типу</li>
-              <li class="sorting-item">По рейтингу</li>
+                <li class="sorting-item sorting-item-active">По цене</li>
+                <li class="sorting-item">По типу</li>
+                <li class="sorting-item">По рейтингу</li>
             </ul>
         </div>
         <div class="sorting-btn">
@@ -106,17 +125,12 @@
             <h4 class="content-card-title">Amara Resort & Spa</h4>
               <span class="content-type">Гостиница</span>
               <span class="content-from">От 4000 Р</span>
-            <p>
-              <a href="#" class="content-btn content-btn-info"><span class="content-btn-text content-btn-text-info">Подробнее</span></a>
-              <a href="#" class="content-btn content-btn-reserved"><span class="content-btn-text content-btn-text-reserved">Забронировать</span></a>
+            <p class="content-text-about">
+              <a href="#" class="content-btn content-btn-info"><span class="content-btn-text content-btn-info-text">Подробнее</span></a>
+              <a href="#" class="content-btn content-btn-reserved"><span class="content-btn-text content-btn-reserved-text">Забронировать</span></a>
             </p>
           <div class="rating">
-            <ul class="rating-list">
-              <li class="rating-item"><span class="rating-item-star">1 звезда</span></li>
-              <li class="rating-item"><span class="rating-item-star">2 звезды</span></li>
-              <li class="rating-item"><span class="rating-item-star">3 звезды</span></li>
-              <li class="rating-item"><span class="rating-item-star">4 звезды</span></li>
-            </ul>
+            <p class="rating-stars">4 звезды</p>
             <p class="rating-text">Рейтинг: 8,5</p>
           </div>
           </article>
@@ -126,21 +140,14 @@
               <img src="" alt="Мотель Desert Quail Inn" class="content-img">
             </p>
             <h4 class="content-card-title">Desert Quail Inn</h4>
-            <span class="content-type">Мотель</span>
-            <span class="content-from">От 3000 Р</span>
-            <p>
-              <a href="#" class="content-btn content-btn-info"><span
-                  class="content-btn-text content-btn-text-info">Подробнее</span></a>
-              <a href="#" class="content-btn content-btn-reserved"><span
-                  class="content-btn-text content-btn-text-reserved">Забронировать</span></a>
+              <span class="content-type">Мотель</span>
+              <span class="content-from">От 3000 Р</span>
+            <p class="content-text-about">
+              <a href="#" class="content-btn content-btn-info"><span class="content-btn-text content-btn-info-text">Подробнее</span></a>
+              <a href="#" class="content-btn content-btn-reserved"><span class="content-btn-text content-btn-reserved-text">Забронировать</span></a>
             </p>
             <div class="rating">
-              <ul class="rating-list">
-                <li class="rating-item"><span class="rating-item-star">1 звезда</span></li>
-                <li class="rating-item"><span class="rating-item-star">2 звезды</span></li>
-                <li class="rating-item"><span class="rating-item-star">3 звезды</span></li>
-                <!-- <li class="rating-item"><span class="rating-item-star">4 звезды</span></li> -->
-              </ul>
+              <p class="rating-stars">3 звезды</p>
               <p class="rating-text">Рейтинг: 8,9</p>
             </div>
           </article>
@@ -150,21 +157,14 @@
               <img src="" alt="Апартаменты Villas at Poco Diablo" class="content-img">
             </p>
             <h4 class="content-card-title">Villas at Poco Diablo</h4>
-            <span class="content-type">Апартаменты</span>
-            <span class="content-from">От 2000 Р</span>
-            <p>
-              <a href="#" class="content-btn content-btn-info"><span
-                  class="content-btn-text content-btn-text-info">Подробнее</span></a>
-              <a href="#" class="content-btn content-btn-reserved"><span
-                  class="content-btn-text content-btn-text-reserved">Забронировать</span></a>
+              <span class="content-type">Апартаменты</span>
+              <span class="content-from">От 2000 Р</span>
+            <p class="content-text-about">
+              <a href="#" class="content-btn content-btn-info"><span class="content-btn-text content-btn-info-text">Подробнее</span></a>
+              <a href="#" class="content-btn content-btn-reserved"><span class="content-btn-text content-btn-reserved-text">Забронировать</span></a>
             </p>
             <div class="rating">
-              <ul class="rating-list">
-                <li class="rating-item"><span class="rating-item-star">1 звезда</span></li>
-                <li class="rating-item"><span class="rating-item-star">2 звезды</span></li>
-                <!-- <li class="rating-item"><span class="rating-item-star">3 звезды</span></li> -->
-                <!-- <li class="rating-item"><span class="rating-item-star">4 звезды</span></li> -->
-              </ul>
+              <p class="rating-stars">2 звезды</p>
               <p class="rating-text">Рейтинг: 9,2</p>
             </div>
           </article>
