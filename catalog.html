@@ -21,7 +21,7 @@
           <a href="#" class="navigation-item-link">Фото и видео</a>
         </li>
         <li class="navigation-item">
-          <a href="index.html" class="logo-link">
+          <a href="index.html" class="logo-link"><span class="visually-hidden">Главная страница</span>
             <img src="" class="logo-img" alt="Логотип компании Седона">
           </a>
         </li>
@@ -38,7 +38,7 @@
   <main class="main-catalog">
     <h1 class="visually-hidden main-catalog-title">Каталог для поиска жилья в городе Седона</h1>
     <!-- Раздел с формой ввода фильтров для поиска жилья -->
-    <section class="catalog-product">
+    <section class="filter-insert">
       <h2 class="visually-hidden">Форма ввода фильтров для поиска жилья</h2>
       <form action="https://echo.htmlacademy.ru/" method="post" name="form-filter" class="catalog-filter-form">
         <fieldset class="catalog-filter-group">
@@ -87,7 +87,6 @@
               <label class="catalog-filter-label">От <input type="number" class="catalog-filter-input" name="form-filter-min-price" id="form-filter-min-price" value="0" min="0" max="5000" step="100"></label>
               <label class="catalog-filter-label">До <input type="number" class="catalog-filter-input" name="form-filter-max-price" id="form-filter-max-price" value="3000" min="0" max="10000" step="100"></label>
             </p>
-<!-- Разобраться с классом тега <p> ниже -->
             <p class="catalog-filter-button">
               <input type="button" value="Минимальная цена" name="min-pric-btn" class="btn min-btn">
               <input type="button" value="Максимальная цена" name="max-pric-btn" class="btn max-btn">
@@ -106,9 +105,9 @@
           <p class="result-sorting-text">Найдено: 3</p>
             <ul class="result-sorting-list">
               <p class="sorting-list-text">Сортировка:</p>
-                <li class="sorting-item sorting-item-active">По цене</li>
-                <li class="sorting-item">По типу</li>
-                <li class="sorting-item">По рейтингу</li>
+                <li class="sorting-item sorting-item-active"><a href="#" class="sorting-item-link">По цене</a></li>
+                <li class="sorting-item"><a href="#" class="sorting-item-link">По типу</a></li>
+                <li class="sorting-item"><a href="#" class="sorting-item-link">По рейтингу</a></li>
             </ul>
         </div>
         <div class="sorting-btn">
@@ -122,7 +121,7 @@
             <p class="content-img-text">
               <img src="" alt="Гостиница Amara Resort & Spa" class="content-img">
             </p>
-            <h4 class="content-card-title">Amara Resort & Spa</h4>
+            <h4 class="content-card-title"><a href="#" class="content-card-title-link">Amara Resort & Spa</a></h4>
               <span class="content-type">Гостиница</span>
               <span class="content-from">От 4000 Р</span>
             <p class="content-text-about">
@@ -139,7 +138,7 @@
             <p class="content-img-text">
               <img src="" alt="Мотель Desert Quail Inn" class="content-img">
             </p>
-            <h4 class="content-card-title">Desert Quail Inn</h4>
+            <h4 class="content-card-title"><a href="#" class="content-card-title-link">Desert Quail Inn</a></h4>
               <span class="content-type">Мотель</span>
               <span class="content-from">От 3000 Р</span>
             <p class="content-text-about">
@@ -156,7 +155,7 @@
             <p class="content-img-text">
               <img src="" alt="Апартаменты Villas at Poco Diablo" class="content-img">
             </p>
-            <h4 class="content-card-title">Villas at Poco Diablo</h4>
+            <h4 class="content-card-title"><a href="#" class="content-card-title-link">Villas at Poco Diablo</a></h4>
               <span class="content-type">Апартаменты</span>
               <span class="content-from">От 2000 Р</span>
             <p class="content-text-about">
@@ -186,32 +185,16 @@
         <li class="footer-social-item">
           <a class="button social-button" href="#">
             <span class="visually-hidden">Твиттер</span>
-            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 4.91609C15.191 11.6661 12.247 16.1331 5.34498 15.9981H4.89898C4.48898 15.9981 0.734977 15.5381 0.000976562 14.1111C2.27198 14.3071 3.89398 13.6891 4.69398 12.9341C3.73398 12.6341 2.01498 12.4571 1.71498 9.98409C2.06398 10.0901 2.27898 10.2121 2.90498 10.1031C1.70498 9.24709 0.373977 8.53009 0.447977 6.33009C0.732977 6.65809 1.51498 6.86609 1.78798 6.80209C1.08498 6.56109 -0.182023 3.44209 0.893977 1.85009C2.71198 3.70409 4.62898 5.45609 8.04598 5.62309C8.25398 3.33009 9.18298 1.79309 10.95 1.14409Z"
-                fill="blue" />
-              <!-- Временно поставил цвет иконки для видимости. Далее это удалю и сделаю иконки фоновым изображением -->
-            </svg>
           </a>
         </li>
         <li class="footer-social-item">
           <a class="button social-button" href="#">
             <span class="visually-hidden">Фейсбук</span>
-            <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="green" />
-              <!-- Временно поставил цвет иконки для видимости. Далее это удалю и сделаю иконки фоновым изображением -->
-            </svg>
           </a>
         </li>
         <li class="footer-social-item">
           <a class="button social-button" href="#">
             <span class="visually-hidden">Ютубе</span>
-            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z"
-                fill="red" />
-              <!-- Временно поставил цвет иконки для видимости. Далее это удалю и сделаю иконки фоновым изображением -->
-            </svg>
           </a>
         </li>
       </ul>

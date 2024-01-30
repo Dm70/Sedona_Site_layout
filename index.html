@@ -21,7 +21,7 @@
           <a href="#" class="navigation-item-link">Фото и видео</a>
         </li>
         <li class="navigation-item">
-          <a class="logo-link">
+          <a class="logo-link navigation-item-link navigation-item-link-active"><span class="visually-hidden">Главная страница</span>
             <img src="" class="logo-img" alt="Логотип компании Седона">
           </a>
         </li>
@@ -41,7 +41,7 @@
       <section class="welcome">
         <!-- Здесь будет фоновой изображение с надписями, выполнеными в формате svg -->
         <h2 class="welcome-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
-        <p class="welcome-about">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+        <p class="welcome-about">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       </section>
     <!-- Раздел сайта "Контент и преимущества города Седона" -->
     <section class="advantages">
@@ -50,23 +50,23 @@
         <p сlass="advantages-number">— №1 —</p>
         <p class="advantages-description">Седона — не аттракцион для туристов, там
         течёт своя жизнь</p>
-        <img src="" class="advantages-img" alt="Это настоящий городок">
+        <img src="" class="advantages-img" alt="Фото города Седона">
       </div>
       <!-- Раздел сайта с сервисом услуг: жильё, еда, сувениры -->
         <article class="service">
           <div class="service-chapter">
             <!-- Здесь будет иконка дома -->
-            <h2 class="service-title">Жильё</h2>
+            <h3 class="service-title">Жильё</h3>
             <p class="service-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
           </div>
           <div class="service-chapter">
             <!-- Здесь будет иконка еды -->
-            <h2 class="service-title">Еда</h2>
+            <h3 class="service-title">Еда</h3>
             <p class="service-description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
           </div>
           <div class="service-chapter">
             <!-- Здесь будет иконка сувениров -->
-            <h2 class="service-title">Сувениры</h2>
+            <h3 class="service-title">Сувениры</h3>
             <p class="service-description">Не только китайского, но и местного производства!</p>
           </div>
         </article>
@@ -75,7 +75,7 @@
         <h2 class="advantages-title">Там есть Мост дьявола</h2>
         <p сlass="advantages-number">— №2 —</p>
         <p class="advantages-description">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-        <img src="" class="advantages-img" alt="Мост дьявола">
+        <img src="" class="advantages-img" alt="Фото моста дьявола">
       </div>
       <div class="advantages-chapter advantages-chapter-no-image">
         <h2 class="advantages-title">Небольшая площадь</h2>
@@ -90,16 +90,16 @@
       <div class="advantages-chapter advantages-chapter-no-image">
         <h2 class="advantages-title">Мало туристов</h2>
         <p сlass="advantages-number">— №5 —</p>
-        <p class="advantages-description">Большинство едет в гранд каньон и толпится там</p>
+        <p class="advantages-description">Большинство едет в Гранд Каньон и толпится там</p>
       </div>
     </section>
     <!-- Раздел сайта Поиск гостиницы -->
     <section class="search">
-      <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
+      <h3 class="visually-hidden">Поиск гостиницы в Седоне</h3>
       <div class="search-hotel">
-        <p>Заинтересовались?</p>
+        <p class="search-title">Заинтересовались?</p>
         <p class="search-offer">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <a href="#" class="search-button"><span>Поиск Гостиницы в Седоне</span></a>
+        <a href="#" class="search-button button"><span class="search-button-lead">Поиск Гостиницы в Седоне</span></a>
       </div>
     <!-- Разметка Popup "Поиск гостиницы в Седоне" -->
         <div class="search-popup">
@@ -108,7 +108,7 @@
     </section>
     <!-- Раздел сайта Карта местоположение города -->
     <section class="map">
-      <h2 class="visually-hidden">Карта с местоположением города</h2>
+      <h2 class="visually-hidden">Карта с местоположением города Седона</h2>
       <img src="" class="map-img" alt="Карта местоположение города">
     </section>
   </main>
@@ -127,38 +127,22 @@
         <li class="footer-social-item">
           <a class="button social-button" href="#">
             <span class="visually-hidden">Твиттер</span>
-            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 4.91609C15.191 11.6661 12.247 16.1331 5.34498 15.9981H4.89898C4.48898 15.9981 0.734977 15.5381 0.000976562 14.1111C2.27198 14.3071 3.89398 13.6891 4.69398 12.9341C3.73398 12.6341 2.01498 12.4571 1.71498 9.98409C2.06398 10.0901 2.27898 10.2121 2.90498 10.1031C1.70498 9.24709 0.373977 8.53009 0.447977 6.33009C0.732977 6.65809 1.51498 6.86609 1.78798 6.80209C1.08498 6.56109 -0.182023 3.44209 0.893977 1.85009C2.71198 3.70409 4.62898 5.45609 8.04598 5.62309C8.25398 3.33009 9.18298 1.79309 10.95 1.14409Z"
-                fill="blue" />
-                <!-- Временно поставил цвет иконки для видимости. Далее это удалю и сделаю иконки фоновым изображением -->
-            </svg>
           </a>
         </li>
         <li class="footer-social-item">
           <a class="button social-button" href="#">
             <span class="visually-hidden">Фейсбук</span>
-            <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="green" />
-              <!-- Временно поставил цвет иконки для видимости. Далее это удалю и сделаю иконки фоновым изображением -->
-            </svg>
           </a>
         </li>
         <li class="footer-social-item">
           <a class="button social-button" href="#">
             <span class="visually-hidden">Ютубе</span>
-            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z"
-                fill="red" />
-                <!-- Временно поставил цвет иконки для видимости. Далее это удалю и сделаю иконки фоновым изображением -->
-            </svg>
           </a>
         </li>
       </ul>
     </section>
     <section class="development">
-      <h3 class="visually-hidden">Разработчик сайта Седона</h3>
+      <h4 class="visually-hidden">Разработчик сайта Седона</h4>
       <p class="development-text">Website by</p>
       <p class="development-author">
         <a href="https://htmlacademy.ru/" class="development-author-link" target="_blank">
