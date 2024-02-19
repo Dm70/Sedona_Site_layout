@@ -16,5 +16,9 @@
   font-display: swap;
 }
 
+body {
+  box-sizing: border-box;
+}
+
 
 
