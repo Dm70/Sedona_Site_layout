@@ -16,9 +16,39 @@
   font-display: swap;
 }
 
+/* Common */
+.page {
+  font-family: 'PT sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.21;
+  background-color: #888888;
+}
+
 body {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  background-color: #F2F2F2;
   box-sizing: border-box;
 }
 
+.visually-hidden {
+  display: none;
+}
 
+.main-header {
+  background-color: #FFFFFF;
+}
 
+.welcome {
+  background-image: url(../img/background/background_photo.jpg);
+  background-size: cover;
+}
+
+.advantages-chapter:not(.advantages-chapter-no-image) {
+  background-color: #81B3D2;
+}
+
+.advantages-chapter-no-image {
+  background-color: #EEEEEE;
+}
