@@ -348,7 +348,12 @@ template {
   display: none;
 }
 
-/* Это добавил уже сам */
+/**
+* Это добавил уже сам */
 li {
-  list-style: none;
+  list-style-type: none;
+}
+
+*::before, *::after {
+  box-sizing: border-box;
 }

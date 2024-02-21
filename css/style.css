@@ -21,14 +21,14 @@
   font-family: 'PT sans', sans-serif;
   font-size: 14px;
   line-height: 1.21;
-  background-color: #888888;
+  /* background-color: #888888; */
 }
 
 body {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-  background-color: #F2F2F2;
+  /* background-color: #F2F2F2; */
   box-sizing: border-box;
 }
 
@@ -36,13 +36,16 @@ body {
   display: none;
 }
 
-.main-header {
+.main-header, .main-index, .main-footer {
   background-color: #FFFFFF;
 }
 
+/* Разделы сверху вниз */
 .welcome {
   background-image: url(../img/background/background_photo.jpg);
   background-size: cover;
+  /* width: 1200px; */
+  /* height: 725px; */
 }
 
 .advantages-chapter:not(.advantages-chapter-no-image) {
@@ -52,3 +55,34 @@ body {
 .advantages-chapter-no-image {
   background-color: #EEEEEE;
 }
+
+.service-chapter-home::before {
+  content: '';
+  width: 75px;
+  height: 72px;
+  display: block;
+  background-image: url(../img/icon/home.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.service-chapter-food::before {
+  content: '';
+  width: 75px;
+  height: 70px;
+  display: block;
+  background-image: url(../img/icon/food.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.service-chapter-souvenir::before {
+  content: '';
+  width: 64px;
+  height: 77px;
+  display: block;
+  background-image: url(../img/icon/souvenir.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
