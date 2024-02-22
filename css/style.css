@@ -21,6 +21,7 @@
   font-family: 'PT sans', sans-serif;
   font-size: 14px;
   line-height: 1.21;
+  text-transform: uppercase;
   /* background-color: #888888; */
 }
 
@@ -29,18 +30,28 @@ body {
   font-size: inherit;
   line-height: inherit;
   /* background-color: #F2F2F2; */
-  box-sizing: border-box;
 }
 
 .visually-hidden {
   display: none;
 }
 
-.main-header, .main-index, .main-footer {
+.main-header, .main-index, .main-footer, .main-catalog {
   background-color: #FFFFFF;
 }
 
-/* Разделы сверху вниз */
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* index.html Разделы сверху вниз */
+.main-header {
+  line-height: 1.26;
+  font-weight: 700;
+  color: #000000;
+}
+
 .welcome {
   background-image: url(../img/background/background_photo.jpg);
   background-size: cover;
@@ -48,8 +59,47 @@ body {
   /* height: 725px; */
 }
 
+.welcome-title {
+  font-size: 21px;
+  line-height: 1.26;
+  font-weight: 700;
+  color: #000000;
+}
+
+.welcome-about {
+  line-height: 1.26;
+  color: #333333;
+}
+
+.advantages-title {
+  font-size: 21px;
+  line-height: 1.21;
+  font-weight: 700;
+}
+
+/* .advantages-number, .advantages-description {
+  font-size: 14px;
+  line-height: 1.21;
+} */
+
+.advantages-chapter, .service {
+  display: flex;
+  flex-direction: row;
+}
+
+.service-title {
+  font-size: 21px;
+  line-height: 1.21;
+  font-weight: 700;
+}
+
+.service-description {
+  color: #333333;
+}
+
 .advantages-chapter:not(.advantages-chapter-no-image) {
   background-color: #81B3D2;
+  color: #FFFFFF;
 }
 
 .advantages-chapter-no-image {
@@ -60,7 +110,7 @@ body {
   content: '';
   width: 75px;
   height: 72px;
-  display: block;
+  display: inline-block;
   background-image: url(../img/icon/home.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -70,7 +120,7 @@ body {
   content: '';
   width: 75px;
   height: 70px;
-  display: block;
+  display: inline-block;
   background-image: url(../img/icon/food.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -80,9 +130,16 @@ body {
   content: '';
   width: 64px;
   height: 77px;
-  display: block;
+  display: inline-block;
   background-image: url(../img/icon/souvenir.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
+/* catalog.html Разделы сверху вниз */
+.filter-insert {
+  background-image: url(../img/background/background_filter.png);
+  background-color: #ABABAB;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
