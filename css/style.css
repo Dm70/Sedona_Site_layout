@@ -22,7 +22,7 @@
   font-size: 14px;
   line-height: 1.21;
   text-transform: uppercase;
-  /* background-color: #888888; */
+  background-color: #888888;
 }
 
 body {
@@ -30,6 +30,9 @@ body {
   font-size: inherit;
   line-height: inherit;
   /* background-color: #F2F2F2; */
+  width: 1280px;
+  margin: auto;
+
 }
 
 .visually-hidden {
@@ -37,7 +40,8 @@ body {
 }
 
 .main-header, .main-index, .main-footer, .main-catalog {
-  background-color: #FFFFFF;
+  /* background-color: #FFFFFF; */
+  width: 1200px;
 }
 
 a {
@@ -85,6 +89,11 @@ a {
 .advantages-chapter, .service {
   display: flex;
   flex-direction: row;
+}
+
+.service {
+  text-align: center;
+  background-color: #FFFFFF;
 }
 
 .service-title {
@@ -136,10 +145,18 @@ a {
   background-position: center;
 }
 
+.search {
+  background-color: #FFFFFF;
+}
+
 /* catalog.html Разделы сверху вниз */
 .filter-insert {
   background-image: url(../img/background/background_filter.png);
   background-color: #ABABAB;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.main-footer {
+  background-color: #FFFFFF;
 }
