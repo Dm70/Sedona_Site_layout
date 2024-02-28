@@ -29,7 +29,7 @@ body {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-  /* background-color: #F2F2F2; */
+  background-color: #F2F2F2;
   width: 1280px;
   margin: auto;
 
@@ -40,8 +40,9 @@ body {
 }
 
 .main-header, .main-index, .main-footer, .main-catalog {
-  /* background-color: #FFFFFF; */
+  background-color: #FFFFFF;
   width: 1200px;
+  margin: auto;
 }
 
 a {
