@@ -22,7 +22,7 @@
   font-size: 14px;
   line-height: 1.21;
   text-transform: uppercase;
-  background-color: #888888;
+  /* background-color: #888888; */
 }
 
 body {
@@ -87,12 +87,12 @@ a {
   line-height: 1.21;
 } */
 
-.advantages-chapter, .service {
+.advantages-chapter {
   display: flex;
-  flex-direction: row;
 }
 
 .service {
+  display: flex;
   text-align: center;
   background-color: #FFFFFF;
 }
