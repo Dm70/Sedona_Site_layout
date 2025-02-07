@@ -87,8 +87,10 @@ a {
   line-height: 1.21;
 } */
 
-.advantages-chapter {
+.advantages-chapter:not(.advantages-chapter-no-image) {
   display: flex;
+  background-color: #81B3D2;
+  color: #FFFFFF;
 }
 
 .service {
@@ -105,11 +107,6 @@ a {
 
 .service-description {
   color: #333333;
-}
-
-.advantages-chapter:not(.advantages-chapter-no-image) {
-  background-color: #81B3D2;
-  color: #FFFFFF;
 }
 
 .advantages-chapter-no-image {
