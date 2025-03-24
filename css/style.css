@@ -59,9 +59,10 @@ a {
 
 .welcome {
   background-image: url(../img/background/background_photo.jpg);
+  background-color: #83B3D3;
   background-size: cover;
-  /* width: 1200px; */
-  /* height: 725px; */
+  width: 1200px;
+  height: 725px;
 }
 
 .welcome-title {
